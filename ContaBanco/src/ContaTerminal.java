@@ -3,8 +3,6 @@ import java.util.Scanner;
 
 public class ContaTerminal {
     public static void main(String[] args) throws Exception {
-        // TODO: conhecer e importar scanner.
-
         // Exibir as mensagens para o usuário
 
         // Obter pela Scanner os valores digitados no terminal
@@ -21,8 +19,10 @@ public class ContaTerminal {
         System.out.println("Nos informe seu nome!");
         String nome = scanner.next();
 
-        System.out.println("Nos informe seu saldo!");
-        String saldo = scanner.next();
+        System.out.println("Nos informe seu saldo.");
+        double saldo = scanner.nextDouble();
+
+        scanner.close();
 
         // Mensagem para o usuário
 
