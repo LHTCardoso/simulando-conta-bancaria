@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -10,23 +11,28 @@ public class ContaTerminal {
         // Exibir a mensagem da conta criada
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
-        System.out.println("Digite o número da sua conta! ");
-        int conta = scanner.nextInt();
+        try {
+            System.out.println("Digite o número da sua conta! ");
+            int conta = scanner.nextInt();
 
-        System.out.println("Agora, digite o numero de sua agencia!");
-        String agencia = scanner.next();
+            System.out.println("Agora, digite o numero de sua agencia!");
+            String agencia = scanner.next();
 
-        System.out.println("Nos informe seu nome!");
-        String nome = scanner.next();
+            System.out.println("Nos informe seu nome!");
+            String nome = scanner.next();
 
-        System.out.println("Nos informe seu saldo.");
-        double saldo = scanner.nextDouble();
+            System.out.println("Nos informe seu saldo.");
+            String saldo = scanner.next();
 
+            // Mensagem para o usuário
+
+            System.out.println("Olá " + nome + ", obrigado por criar uma conta em nosso banco, sua agência é a "
+                    + agencia
+                    + ", a sua conta é a " + conta + " e seu saldo é de " + saldo
+                    + " e já está disponível para saque.");
+        } catch (InputMismatchException e) {
+            System.out.println("Entrada inválida. Por favor, reinicie o programa e insira os valores corretamente.");
+        }
         scanner.close();
-
-        // Mensagem para o usuário
-
-        System.out.println("Olá " + nome + ", obrigado por criar uma conta em nosso banco, sua agência é a " + agencia
-                + ", a sua conta é a " + conta + " e seu saldo é de " + saldo + " já está disponível para saque.");
     }
 }
