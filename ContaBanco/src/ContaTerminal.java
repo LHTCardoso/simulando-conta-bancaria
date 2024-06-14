@@ -12,21 +12,21 @@ public class ContaTerminal {
         // Exibir a mensagem da conta criada
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
-        System.out.println("Digite o número da sua conta: ");
+        System.out.println("Digite o número da sua conta! ");
         int conta = scanner.nextInt();
 
-        System.out.println("Agora, digite o numero de sua agencia");
+        System.out.println("Agora, digite o numero de sua agencia!");
         String agencia = scanner.next();
 
-        System.out.println("Nos informe seu nome");
+        System.out.println("Nos informe seu nome!");
         String nome = scanner.next();
 
-        System.out.println("Nos informe seu saldo");
-        double saldo = scanner.nextDouble();
+        System.out.println("Nos informe seu saldo!");
+        String saldo = scanner.next();
 
         // Mensagem para o usuário
 
-        System.out.println("Olá" + nome + ", obrigado por criar uma conta em nosso banco, sua agência é" + agencia
-                + ", conta " + conta + " e seu saldo " + saldo + " já está disponível para saque.");
+        System.out.println("Olá " + nome + ", obrigado por criar uma conta em nosso banco, sua agência é a " + agencia
+                + ", a sua conta é a " + conta + " e seu saldo é de " + saldo + " já está disponível para saque.");
     }
 }
